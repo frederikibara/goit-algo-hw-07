@@ -50,7 +50,7 @@ class AddressBook(UserDict):
         if not self.data:
             return 'Address book is empty'
 
-        entries = []
+        items = []
         for key, record in self.data.items():
-            entries.append(f'Name: {record.name.value}, Phones: {', '.join(p.value for p in record.phones)}')
-        return "\n".join(entries)
+            items.append(f'Name: {record.name.value}, Phones: {', '.join(p.value for p in record.phones)}')
+        return "\n".join(items)
